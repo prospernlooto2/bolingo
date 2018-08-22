@@ -1,0 +1,1798 @@
+﻿
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+
+    <!-- Meta Tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Title -->
+
+    <title>Bolingo</title>
+
+
+    <!-- Google Fonts -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+
+    <!-- Stylesheets -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/fontello.css" rel="stylesheet" type="text/css">
+
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css">
+
+    <link href="js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <link href="css/responsive-calendar.css" rel="stylesheet" type="text/css">
+
+    <link href="css/chosen.css" rel="stylesheet" type="text/css">
+
+    <link href="jackbox/css/jackbox.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/cloud-zoom.css" rel="stylesheet" type="text/css"/>
+
+    <link href="css/colorpicker.css" rel="stylesheet" type="text/css">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+    <!--[if IE 9]>
+
+        <link rel="stylesheet" href="css/ie9.css">
+
+    <![endif]-->
+
+
+    <!--[if lt IE 9]>
+
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+        <link href="css/jackbox-ie8.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="css/ie.css">
+
+    <![endif]-->
+
+
+    <!--[if gt IE 8]>
+
+        <link href="css/jackbox-ie9.css" rel="stylesheet" type="text/css"/>
+
+    <![endif]-->
+
+
+    <!--[if IE 7]>
+
+        <link rel="stylesheet" href="css/fontello-ie7.css">
+
+    <![endif]-->
+
+
+    <style type="text/css">
+
+        .no-fouc { display: none; }
+
+    </style>
+
+
+    <!-- jQuery -->
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+
+
+    <!-- Preloader -->
+
+    <script src="js/jquery.queryloader2.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $('html').addClass('no-fouc');
+
+
+        $(document).ready(function() {
+
+
+            $('html').show();
+
+
+            var window_w = $(window).width();
+
+            var window_h = $(window).height();
+
+            var window_s = $(window).scrollTop();
+
+
+            $("body").queryLoader2({
+                backgroundColor: '#f2f4f9',
+
+                barColor: '#f39c35',
+
+                barHeight: 4,
+
+                percentage: false,
+
+                deepSearch: true,
+
+                minimumTime: 1000,
+
+                onComplete: function() {
+
+
+                    $('.').filter(function(index) {
+
+
+                        return this.offsetTop < (window_s + window_h);
+
+
+                    }).each(function(index, value) {
+
+
+                        var el = $(this);
+
+                        var el_y = $(this).offset().top;
+
+
+                        if ((window_s) > el_y) {
+
+                            $(el).addClass('animated fadeInDown').removeClass('');
+
+                            setTimeout(function() {
+
+                                    $(el).css('opacity', '1').removeClass('animated fadeInDown');
+
+                                },
+                                2000);
+
+                        }
+
+
+                    });
+
+
+                }
+
+            });
+
+
+        });
+
+    </script>
+
+
+</head>
+
+
+<body class="sticky-header-on tablet-sticky-header">
+
+
+<div id="fb-root"></div>
+
+<script>
+    (function(d, s, id) {
+
+        var js, fjs = d.getElementsByTagName(s)[0];
+
+        if (d.getElementById(id)) return;
+
+        js = d.createElement(s);
+        js.id = id;
+
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+
+        fjs.parentNode.insertBefore(js, fjs);
+
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Container -->
+
+<div class="container">
+
+
+<!-- Header -->
+
+<header id="header" class="">
+
+
+<!-- Main Header -->
+
+<div id="main-header">
+
+
+    <div class="container">
+
+
+        <!-- Logo -->
+
+        <div id="logo">
+
+
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<div id="lower-header">
+
+
+    <div class="container">
+
+
+        <div id="menu-button">
+
+            <div>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+            <span>Menu</span>
+
+        </div>
+
+
+        <ul id="navigation">
+
+
+            <!-- Home -->
+
+            <li class="home-button current-menu-item">
+
+
+                <a href="index.html">
+                    <i class="icons icon-home"></i>
+                </a>
+
+
+            </li>
+
+            <!-- /Home -->
+
+
+            <!-- Pages -->
+
+            <li >
+
+
+                <a href="about.html">About</a>
+
+
+            </li>
+
+            <!-- /Pages -->
+
+
+            <!-- Events -->
+
+            <li >
+
+                <span>Our projects</span>
+
+                <ul>
+
+                    <li>
+                        <a href="blog-single-sidebar.html">Ecole notre mere de la paix</a>
+                    </li>
+                    <li>
+                        <a href="blog-single-sidebar.html">Kelasi</a>
+                    </li>
+                </ul>
+
+
+            </li>
+            <li >
+
+
+                <span>Galleries</span>
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="media-classic-4columns.html">Event 21/05/2016</a>
+                    </li>
+
+                    <li>
+                        <a href="media-classic-5columns.html">Our experiences</a>
+                    </li>
+
+
+                </ul>
+
+
+            </li>
+            <li >
+
+                <a href="faq.html">FAQ</a>
+
+            </li>
+            <li >
+
+                <a href="contact.html">Join us</a>
+
+
+            </li><li class="donate-button ">
+
+                <a href="blog-single-sidebar.html">Donate Today</a>
+
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+</header>
+
+<section id="content">
+
+
+<!-- Section -->
+
+<section class="full-width-bg full-width-slider-section">
+
+
+    <div class="row">
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+            <!-- Revolution Slider -->
+
+            <div class="tp-banner-container main-revolution">
+
+
+                <span class="Apple-tab-span"></span>
+
+
+                <div class="tp-banner full-width-revolution">
+
+
+                    <ul>
+
+                        <li data-transition="papercut" data-slotamount="7">
+
+                            <img src="img/1920x490_slide1.jpg" alt="">
+
+                            <div class="tp-caption" data-x="100" data-y="150" data-speed="700" data-start="1000" data-easing="easeOutBack">
+                                <h2>A little genuine help will <br>improve lives of many children <br> in the Democratic republic of Congo
+                                </h2>
+                            </div>
+
+                        </li>
+
+
+                        <li data-transition="papercut" data-slotamount="7">
+
+                            <img src="img/1920x490_slide2.jpg" alt="">
+
+                            <div class="tp-caption align-center" data-x="center" data-y="135" data-speed="700" data-start="1000" data-easing="easeOutBack">
+                                <h4 class="great-vibes">it’s time for a change</h4>
+                            </div>
+
+                            <div class="tp-caption align-center" data-x="center" data-y="220" data-speed="500" data-start="1200" data-easing="easeOutBack">
+                                <h2>Be part of the youth movement !</h2>
+                            </div>
+
+                            <div class="tp-caption align-center" data-x="center" data-y="300" data-speed="300" data-start="1400">
+                                <a href="contact.html" class="button big button-arrow">Join us</a>
+                            </div>
+
+                        </li>
+
+
+                        <li data-transition="papercut" data-slotamount="7">
+
+                            <img src="img/1920x490_slide3.jpg" alt="">
+
+                            <div class="tp-caption align-right" data-x="right" data-y="150" data-speed="700" data-start="1000" data-easing="easeOutBack">
+                                <h2>Today's children are tomorrow's future</h2>
+                            </div>
+
+
+                            <div class="tp-caption align-right" data-x="right" data-y="305" data-speed="300" data-start="1400">
+                                <a href="blog-single-sidebar.html" class="button big button-arrow">More Info</a>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- /Revolution Slider -->
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+<section class="section2 full-width-bg gray-bg">
+
+
+    <div class="row">
+
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+
+
+            <div class="issue-block">
+
+
+                <div class="issue-content">
+
+
+                    <h4>About</h4>
+
+                    <p>Bolingo was founded by a diverse group of youth, originally from the Democratic Republic of Congo and Germany.</p>
+
+
+                    <a class="button big button-arrow" href="about.html">Read more</a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+
+
+            <div class="issue-block">
+
+
+                <div class="issue-content">
+
+
+                    <h4>Our approach</h4>
+
+                    <p>Bolingo has 6 steps to tackle the eduction problem in the Democratic Republic of Congo.<br/><br/>
+                    </p>
+
+
+                    <a class="button big button-arrow" href="about.html#approach">Read more</a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+
+
+            <div class="issue-block">
+
+
+                <div class="issue-content">
+
+
+                    <h4>Our vision</h4>
+
+                    <p>We want to give the children of the Democratic Republic of Congo the possibility of a better life.<br/>
+                    </p>
+
+
+                    <a class="button big button-arrow" href="about.html#vision">Read more</a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+
+
+            <div class="issue-block">
+
+
+                <div class="issue-content">
+
+
+                    <h4>Our promise</h4>
+
+                    <p>Bolingo promises unconditional love, love for all races, religions, cultures and beliefs. We promise unity and transparency.<br/>
+                    </p>
+
+
+                    <a class="button big button-arrow" href="about.html#vision">Read more</a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+<section class="section2 full-width-bg gray-bg background_section_1">
+
+
+    <div class="row">
+
+
+        <div class="col-sm-12">
+
+
+            <!-- Owl Carousel -->
+
+            <div class="owl-carousel-container no-margin-bottom">
+
+
+                <div class="owl-header">
+
+
+                    <h3 class="">Our Projects</h3>
+
+
+                    <div class="carousel-arrows ">
+
+                        <span class="left-arrow">
+                            <i class="icons icon-left-dir"></i>
+                        </span>
+
+                        <span class="right-arrow">
+                            <i class="icons icon-right-dir"></i>
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="owl-carousel" data-max-items="1">
+
+
+                    <div>
+
+
+                        <div class="cause_section clearfix">
+
+                            <figure>
+                                <img src="img/ProjectKelasi.jpg" alt="">
+                            </figure>
+
+                            <div class="cause_disc">
+
+                                <h2>
+                                    <a href="kelasi.html">Kelasi</a>
+                                </h2>
+
+                                <p>L'ASBL GENEROUS en collaboration avec BOLINGO ASBL effectueront une descente le 01Septembre 2018 dans un orphelinat de la place et le 07 septembre dans une école en vue d aider ces enfants concernant leur rentrée des classes pour l'année scolaire 2018-2019.</p>
+
+
+                                <a href="kelasi.html" class="button donate big">Donate Now</a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- Owl Item -->
+
+                    <div>
+
+
+                        <div class="cause_section clearfix">
+
+                            <figure>
+                                <img src="img/750x400_img.jpg" alt="">
+                            </figure>
+
+                            <div class="cause_disc">
+
+                                <h2>
+                                    <a href="blog-single-sidebar.html">Ecole Notre mere de la paix</a>
+                                </h2>
+
+                                <p>The general curriculum of Congo is taught at this school. It needs help, as it lacks basic resources and materials. The learning conditions are critical, and the children do not take part in any sport or social activities.</p>
+
+
+                                <a href="blog-single-sidebar.html" class="button donate big">Donate Now</a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- /Owl Item -->
+
+                    <div>
+
+
+                        <div class="cause_section clearfix">
+
+                            <figure>
+                                <img src="img/750x400_img_Valere.jpg" alt="">
+                            </figure>
+
+                            <div class="cause_disc">
+
+                                <h2>
+                                    <a href="collegerevperevalere.html">Collège Rev Père Valère</a>
+                                </h2>
+
+                                <p>Collège Rev Père Valère is situated at avenue Musaka n# 1, Quand Luka.</p>
+                                <p>The general curriculum of Congo is taught at this school. It needs help, as it lacks basic resources and materials. The learning conditions are critical, and the children do not take part in any sport or social activities.</p>
+
+
+                                <a href="collegerevperevalere.html" class="button donate big">Donate Now</a>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- Owl Item -->
+
+
+                    <!-- /Owl Item -->
+
+
+                    <!-- Owl Item -->
+
+
+                    <!-- /Owl Item -->
+
+
+                </div>
+
+
+            </div>
+
+            <!-- /Owl Carousel -->
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+<section class="section2 full-width-bg gray-bg">
+
+
+<div class="row">
+
+<div class="col-sm-12">
+
+
+<!-- Owl Carousel -->
+
+<div>
+
+
+<div class="owl-header">
+
+
+    <h3 class="">meet our members</h3>
+
+    <p>The founders are a diverse group of youth which collectively believe in one virtue: Love. Our motto is to “love our neighbors as ourselves”. We aim to develop communities by changing lives through the way youth think. Only in union of many cultures, races, religions and beliefs that anything perfect can be formed. A single individual cannot offer you perfection, but the whole of humanity, with all its varied characteristics, may do so! We believe that every individual has something which is definitely part of the whole.</p>
+
+
+    <div class="carousel-arrows ">
+
+        <span class="left-arrow">
+            <i class="icons icon-left-dir"></i>
+        </span>
+
+        <span class="right-arrow">
+            <i class="icons icon-right-dir"></i>
+        </span>
+
+    </div>
+
+
+</div>
+
+
+<div class="owl-carousel" data-max-items="4">
+
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/4.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Patrick Nlooto</h2>
+
+            <span class="job">Executive director</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- /Owl Item -->
+
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/5.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Lucien Batuli</h2>
+
+            <span class="job">President</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- /Owl Item -->
+
+
+<!-- Owl Item -->
+
+
+<!-- /Owl Item -->
+
+
+<!-- Owl Item -->
+
+
+<!-- /Owl Item -->
+
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/8.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Pierrot Kekele</h2>
+
+            <span class="job">Secretary</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- /Owl Item -->
+
+
+<!-- Owl Item -->
+
+
+<!-- /Owl Item -->
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/10.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Merveille Aruna</h2>
+
+            <span class="job">Vice President</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+
+<!-- Owl Item -->
+
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/13.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Fabrice Mboma</h2>
+
+            <span class="job">Operations</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/14.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Prosper Nlooto</h2>
+
+            <span class="job">Media and Event management</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/15.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Justus Herbert</h2>
+
+            <span class="job">Media and Event management</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/16.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Eleazar Luboma</h2>
+
+            <span class="job">Media and Event management</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/17.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Raoul Bakashika</h2>
+
+            <span class="job">Public relations</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/18.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Heroique Nlooto</h2>
+
+            <span class="job">Secretary general</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/19.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>David Steinebach</h2>
+
+            <span class="job">Finance</span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Team Member -->
+
+
+</div>
+
+<!-- Owl Item -->
+
+<div>
+
+
+    <!-- Team Member -->
+
+    <div class="team-member  ">
+
+
+        <img class="team-member-image" src="img/team/21.jpg" alt="">
+
+
+        <div class="team-member-info">
+
+
+            <h2>Alain Miruho</h2>
+
+            <span class="job">Projects</span>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- /Team Member -->
+
+<!-- Team Member -->
+
+<div class="team-member  ">
+
+
+    <img class="team-member-image" src="img/team/20.jpg" alt="">
+
+
+    <div class="team-member-info">
+
+
+        <h2>Robert Mwamba</h2>
+
+        <span class="job">Projects</span>
+
+
+    </div>
+
+
+</div>
+
+<!-- /Team Member -->
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- /Section -->
+
+
+<!-- Section -->
+
+<section class="section2 full-width-bg">
+
+
+<div class="row">
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+        <!-- Owl Carousel -->
+
+        <div class="owl-carousel-container no-margin-bottom">
+
+
+            <div class="owl-header">
+
+
+                <h3 class="">Our partners</h3>
+
+
+                <div class="carousel-arrows ">
+
+                    <span class="left-arrow">
+                        <i class="icons icon-left-dir"></i>
+                    </span>
+
+                    <span class="right-arrow">
+                        <i class="icons icon-right-dir"></i>
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="owl-carousel" data-max-items="6">
+
+
+                <!-- Owl Item -->
+
+                <div>
+
+
+                    <!-- Brand -->
+
+                    <div class="">
+
+
+                        <div class="post-image">
+
+                            <a href="https://www.twk.de/">
+                                <img src="img/165x100_brand1.jpg" alt="">
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- /Blog Post -->
+
+
+                </div>
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+                <div>
+
+
+                    <!-- Brand -->
+
+                    <div class="">
+
+
+                        <div class="post-image">
+
+                            <a href="#">
+                                <img src="img/165x100_brand2.jpg" alt="">
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- /Blog Post -->
+
+
+                </div>
+
+                <!-- /Owl Item -->
+                <div>
+
+
+                    <!-- Brand -->
+
+                    <div class="">
+
+
+                        <div class="post-image">
+
+                            <a href="#">
+                                <img src="img/165x100_brand3.jpg" alt="">
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- /Blog Post -->
+
+
+                </div>
+
+
+                <!-- Owl Item -->
+
+                <div>
+
+
+                    <!-- Brand -->
+
+                    <div class="">
+
+
+                        <div class="post-image">
+
+                            <a href="https://www.hyva.com/">
+                                <img src="img/165x100_brand4.jpg" alt="">
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- /Blog Post -->
+
+
+                </div>
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Owl Item -->
+
+
+                <!-- Owl Item -->
+
+
+                <!-- /Blog Post -->
+
+
+            </div>
+
+            <!-- /Owl Item -->
+
+
+        </div>
+
+
+    </div>
+
+    <!-- /Owl Carousel -->
+
+
+</div>
+
+
+</section>
+
+
+</section>
+
+
+</div>
+
+
+<!-- Footer -->
+
+<footer id="footer">
+
+
+    <div class="container">
+
+
+        <!-- Main Footer -->
+
+        <div id="main-footer">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+
+
+                    <h4>About Bolingo</h4>
+
+
+                    <p>Bolingo is an non-governmental organisation, which was founded by a diverse group of youth, originally from the Democratic Republic of Congo and Germany.</p>
+
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-6 ">
+
+
+                    <h4>Sitelinks</h4>
+
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-container">
+
+
+                        <ul class="menu">
+
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html">Join us</a>
+                            </li>
+
+                            <li>
+                                <a href="blog-single-sidebar.html">Our projects</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-6 ">
+
+
+                    <h4>Like us on facebook</h4>
+
+
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbolingo.org%2F&tabs&width=270&height=240&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="270" height="240" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- /Main Footer -->
+
+
+        <!-- Lower Footer -->
+
+        <div id="lower-footer">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-4 col-md-4 col-sm-4 ">
+
+
+                    <p class="copyright">© 2018 Bolingo. All Rights Reserved. <br/>Webmaster: Prosper Nlooto
+                    </p>
+
+
+                </div>
+
+
+                <div class="col-lg-8 col-md-8 col-sm-8 ">
+
+
+                    <div class="social-media">
+
+                        <ul class="social-icons">
+
+                            <li class="facebook">
+                                <a target="_blank" href="http://www.facebook.com/bolingo.org" class="tooltip-ontop" title="Facebook">
+                                    <i class="icons icon-facebook"></i>
+                                </a>
+                            </li>
+
+
+                            <li class="youtube">
+                                <a href="https://www.youtube.com/channel/UCdCmz_eU3vaAesVn60iBYeA" class="tooltip-ontop" title="Youtube">
+                                    <i class="icons icon-youtube-1"></i>
+                                </a>
+                            </li>
+
+
+                            <li class="email">
+                                <a href="mailto:info@bolingo-ngo.org" class="tooltip-ontop" title="Email">
+                                    <i class="icons icon-mail"></i>
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- /Lower Footer -->
+
+
+    </div>
+
+
+</footer>
+
+<!-- /Footer -->
+
+
+<!-- Customize Box -->
+
+
+<!-- /Customize Box -->
+
+
+<!-- Back To Top -->
+
+<a href="#" id="button-to-top">
+    <i class="icons icon-up-dir"></i>
+</a>
+
+
+<!-- /Container -->
+
+
+<!-- JavaScript -->
+
+
+<!-- Bootstrap -->
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+<!-- Modernizr -->
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+
+<!-- Sliders/Carousels -->
+
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+
+<!-- Revolution Slider -->
+
+<script type="text/javascript" src="js/revolution-slider/js/jquery.themepunch.plugins.min.js"></script>
+
+<script type="text/javascript" src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+
+
+<!-- Calendar -->
+
+<script type="text/javascript" src="js/responsive-calendar.min.js"></script>
+
+
+<!-- Raty -->
+
+<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+
+
+<!-- Chosen -->
+
+<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+
+
+<!-- Circles -->
+
+<script type="text/javascript" src="js/circles.min.js"></script>
+
+
+<!-- jFlickrFeed -->
+
+<script type="text/javascript" src="js/jflickrfeed.min.js"></script>
+
+
+<!-- InstaFeed -->
+
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+
+
+<!-- Twitter -->
+
+<script type="text/javascript" src="php/twitter/jquery.tweet.js"></script>
+
+
+<!-- MixItUp -->
+
+<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+
+
+<!-- JackBox -->
+
+<script type="text/javascript" src="jackbox/js/jackbox-packed.min.js"></script>
+
+
+<!-- CloudZoom -->
+
+<script type="text/javascript" src="js/zoomsl-3.0.min.js"></script>
+
+
+<!-- ColorPicker -->
+
+<script type="text/javascript" src="js/colorpicker.js"></script>
+
+
+<!-- Main Script -->
+
+<script type="text/javascript" src="js/script.js"></script>
+
+
+<script>
+
+    var colors = [['#fa985d', '#ffffff']], circles = [];
+
+    var child = document.getElementById('circles-1');
+
+    circles.push(Circles.create({
+        id: child.id,
+
+        value: 0,
+
+        radius: 82.5,
+
+        width: 8,
+
+        maxValue: 100,
+
+        duration: 1000,
+
+        text: function(value) { return value + '%'; },
+
+        colors: ['#fff', '#f39c35']
+
+    }));
+
+
+    var child = document.getElementById('circles-2');
+
+    circles.push(Circles.create({
+        id: child.id,
+
+        value: 45,
+
+        radius: 82.5,
+
+        width: 8,
+
+        maxValue: 100,
+
+        duration: 1000,
+
+        text: function(value) { return value + '%'; },
+
+        colors: ['#fff', '#f39c35']
+
+    }));
+
+
+    var child = document.getElementById('circles-3');
+
+    circles.push(Circles.create({
+        id: child.id,
+
+        value: 92,
+
+        radius: 82.5,
+
+        width: 8,
+
+        maxValue: 100,
+
+        duration: 1000,
+
+        text: function(value) { return value + '%'; },
+
+        colors: ['#fff', '#f39c35']
+
+    }));
+
+</script>
+
+
+<!--[if lt IE 9]>
+
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+
+    <script type="text/javascript" src="js/script_ie.js"></script>
+
+<![endif]-->
+
+
+</body>
+
+
+</html>
